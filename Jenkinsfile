@@ -19,7 +19,7 @@ pipeline {
          }
          stage('Security Scan') {
               steps { 
-                 aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail'
+                 aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'Ok'
                  sh 'echo "Security Scan Work well"'
               }
          }         
