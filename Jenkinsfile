@@ -25,7 +25,7 @@ pipeline {
          }         
          stage('Upload to AWS') {
               steps {
-                  withAWS(region:'us-east-2',credentials:'577885360424') {
+                  withAWS(region:'us-east-2',credentials:'ale_gentil7') {
                   sh 'echo "Uploading content with AWS creds"'
                   s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'static-jenkins-pipeline')
                   }
